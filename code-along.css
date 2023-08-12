@@ -7,6 +7,7 @@
   width: 20%;
   margin: auto;
   display: inline-block;
+  transform: translate(150px);
 }
 
 /****************************************
@@ -18,12 +19,17 @@
   width: 200px;
   height: 200px;
   filter: grayscale(100%);
+  transition: 2s;
 
 }
 
 .transition-demo img:hover {
+    filter: none;
+    transform: scale(1.25) rotate(360deg);
 
 }
+
+
 
 /****************************************
 * Animation
@@ -35,8 +41,13 @@
   width: 500px;
   margin: auto;
   background-color: palegreen;
+  animation-name: sale-bar;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 
 }
+
 
 @keyframes sale-bar {
   0% { background-color: lightgreen; width: 450px }
